@@ -9,7 +9,8 @@ on:
     paths:
       - java-11/
 jobs:
-  build:
+  push:
+    name: "images:java-11"
     runs-on: ubuntu-latest
     steps:
       - name: Check out
