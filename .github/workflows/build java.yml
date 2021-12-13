@@ -10,7 +10,7 @@ on:
       - java/**
 jobs:
   push:
-    name: "images:java_${{ matrix.tag }}"
+    name: "images:java-${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
