@@ -1,4 +1,4 @@
 FROM openjdk:17-slim
 
 RUN apt-get update -y \
- && apt-get install -y curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 curl jq unzip dos2unix wget
+ && apt-get install -y ca-certificates curl dos2unix fontconfig git iproute2 jq libfreetype6 libstdc++6 openssl sqlite3 tar tzdata unzip wget zip
