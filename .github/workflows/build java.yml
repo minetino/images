@@ -1,4 +1,4 @@
-name: build java-11
+name: build java
 on:
   workflow_dispatch:
   schedule:
@@ -7,11 +7,17 @@ on:
     branches:
       - main
     paths:
-      - java-11/
+      - java/**
 jobs:
   push:
-    name: "images:java-11"
+    name: "images:java_${{ matrix.tag }}"
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        tag:
+          - 11
+          - 17
     steps:
       - name: Check out
         uses: actions/checkout@v2
@@ -28,8 +34,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
-          context: ./java-11
-          file: ./java-11/Dockerfile
+          context: ./java
+          file: ./java/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
-            ghcr.io/kpatino/images:java-11
+            ghcr.io/kpatino/images:java-${{ matrix.tag }}
