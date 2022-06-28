@@ -2,12 +2,12 @@ name: build java
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 0 1 * *"
   push:
     branches:
       - main
     paths:
-      - java/**
+      - java-installers/**
 jobs:
   push:
     name: "images:java-${{ matrix.tag }}"
