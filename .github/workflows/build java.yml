@@ -35,8 +35,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
-          context: ./java
-          file: ./java/${{ matrix.tag }}/Dockerfile
+          context: ./java-installers
+          file: ./java-installers/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
             ghcr.io/kpatino/images:java-${{ matrix.tag }}
