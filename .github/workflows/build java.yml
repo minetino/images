@@ -16,8 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - 17-temurin
+          - 8-temurin
           - 11-temurin
+          - 17-temurin
     steps:
       - name: Check out
         uses: actions/checkout@v2
