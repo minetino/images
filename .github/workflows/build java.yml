@@ -17,6 +17,7 @@ jobs:
       matrix:
         tag:
           - 17-temurin
+          - 11-temurin
     steps:
       - name: Check out
         uses: actions/checkout@v2
