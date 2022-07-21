@@ -1,4 +1,4 @@
-name: build java installers
+name: build java installer
 on:
   workflow_dispatch:
   schedule:
@@ -7,18 +7,11 @@ on:
     branches:
       - main
     paths:
-      - java-installers/**
+      - java-installer/**
 jobs:
   push:
-    name: "images:java-installer-${{ matrix.tag }}"
+    name: "images:java-installer"
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 8
-          - 11
-          - 17
     steps:
       - name: Check out
         uses: actions/checkout@v2
@@ -35,8 +28,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
-          context: ./java-installers
-          file: ./java-installers/${{ matrix.tag }}/Dockerfile
+          context: ./java-installer
+          file: ./java-installer/Dockerfile
           push: true
           tags: |
-            ghcr.io/kpatino/images:java-installer-${{ matrix.tag }}
+            ghcr.io/kpatino/images:java-installer
