@@ -10,7 +10,7 @@ on:
       - java-installers/**
 jobs:
   push:
-    name: "images:java-installers-${{ matrix.tag }}"
+    name: "images:java-installer-${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -39,4 +39,4 @@ jobs:
           file: ./java-installers/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
-            ghcr.io/kpatino/images:java-installers${{ matrix.tag }}
+            ghcr.io/kpatino/images:java-installer${{ matrix.tag }}
