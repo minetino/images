@@ -9,9 +9,23 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-
   - package-ecosystem: docker
-    directory: /
+    directory: /java/8-temurin
+    schedule:
+      interval: "weekly"
+      day: "monday"
+  - package-ecosystem: docker
+    directory: /java/11-temurin
+    schedule:
+      interval: "weekly"
+      day: "monday"
+  - package-ecosystem: docker
+    directory: /java/17-temurin
+    schedule:
+      interval: "weekly"
+      day: "monday"
+  - package-ecosystem: docker
+    directory: /java-installer/
     schedule:
       interval: "weekly"
       day: "monday"
