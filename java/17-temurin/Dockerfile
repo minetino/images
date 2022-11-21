@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jre
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jdk
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
@@ -28,7 +28,7 @@ LABEL       org.opencontainers.image.source="https://github.com/kpatino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt-get update -y \
-            && apt-get install -y lsof curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 \
+            && apt-get install -y ca-certificates curl fontconfig git iproute2 jq libfreetype6 libstdc++6 lsof openssl sqlite3 tar tzdata unzip wget zip \
             && useradd -d /home/container -m container
 
 USER        container

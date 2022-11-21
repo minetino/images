@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        eclipse-temurin:11-jre
+FROM        eclipse-temurin:11-jdk
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
