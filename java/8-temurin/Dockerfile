@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:8-jdk
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:8-jre
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
