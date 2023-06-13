@@ -39,4 +39,4 @@ jobs:
           file: ./java/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
-            ghcr.io/kpatino/images:java-${{ matrix.tag }}
+            ghcr.io/minetino/images:java-${{ matrix.tag }}

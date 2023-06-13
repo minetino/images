@@ -32,4 +32,4 @@ jobs:
           file: ./java-installer/Dockerfile
           push: true
           tags: |
-            ghcr.io/kpatino/images:java-installer
+            ghcr.io/minetino/images:java-installer
