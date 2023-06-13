@@ -24,7 +24,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-jre
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
-LABEL       org.opencontainers.image.source="https://github.com/kpatino/images"
+LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt-get update -y \
