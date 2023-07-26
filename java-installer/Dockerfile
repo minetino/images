@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-jre
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:8-jre-alpine
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
@@ -29,5 +29,5 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN         apt-get update -y \
-            && apt-get install -y ca-certificates curl dos2unix fontconfig git iproute2 jq libfreetype6 libstdc++6 openssl sqlite3 tar tzdata unzip wget zip
+RUN         apk update \
+            && apk add --no-cache ca-certificates curl dos2unix fontconfig git iproute2 jq freetype libstdc++6 openssl sqlite tar tzdata unzip wget zip
