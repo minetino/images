@@ -10,15 +10,15 @@ on:
       - java/**
 jobs:
   push:
-    name: "images:java-${{ matrix.tag }}"
+    name: "yolks:java_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         tag:
-          - 8-temurin
-          - 11-temurin
-          - 17-temurin
+          - 8
+          - 11
+          - 17
     steps:
       - name: Check out
         uses: actions/checkout@v3
@@ -39,4 +39,4 @@ jobs:
           file: ./java/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
-            ghcr.io/minetino/images:java-${{ matrix.tag }}
+            ghcr.io/minetino/yolks:java_${{ matrix.tag }}

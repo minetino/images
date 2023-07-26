@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2022 Kevin Patino
+# Copyright (c) 2023 Kevin Patino
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-jre-alpine
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jre-alpine
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 

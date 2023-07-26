@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2022 Kevin Patino
+# Copyright (c) 2023 Kevin Patino
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -28,12 +28,4 @@ LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk update \
-            && apk add --no-cache ca-certificates curl fontconfig git iproute2 jq freetype libstdc++6 lsof openssl sqlite tar tzdata unzip wget zip \
-            && adduser -S appuser -h /home/container
-
-USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
-
-COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/sh", "/entrypoint.sh" ]
+            && apk add --no-cache ca-certificates curl dos2unix fontconfig git iproute2 jq freetype libstdc++6 openssl sqlite tar tzdata unzip wget zip
