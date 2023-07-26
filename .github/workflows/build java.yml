@@ -19,6 +19,7 @@ jobs:
           - 8-temurin
           - 11-temurin
           - 17-temurin
+          - 17-temurin-alpine
     steps:
       - name: Check out
         uses: actions/checkout@v3
