@@ -2,7 +2,7 @@
 
 Custom Docker images (yolks) for Pterodactyl eggs
 
-Java images built with latest Temurin JRE builds
+Java images built with latest Alpine Temurin JRE builds
 
 - [`java8`](https://github.com/minetino/images/tree/main/java/8-temurin)
   - `ghcr.io/minetino/images:java-8-temurin`
