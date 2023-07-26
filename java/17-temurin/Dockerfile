@@ -20,20 +20,20 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jre
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jre-alpine
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
 LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apt-get update -y \
-            && apt-get install -y ca-certificates curl fontconfig git iproute2 jq libfreetype6 libstdc++6 lsof openssl sqlite3 tar tzdata unzip wget zip \
-            && useradd -d /home/container -m container
+RUN         apk update \
+            && apk add --no-cache ca-certificates curl fontconfig git iproute2 jq freetype libstdc++6 lsof openssl sqlite tar tzdata unzip wget zip \
+            && adduser -S appuser -h /home/container
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+CMD         [ "/bin/sh", "/entrypoint.sh" ]
