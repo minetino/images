@@ -28,7 +28,7 @@ LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk update \
-            && apk add --no-cache ca-certificates curl fontconfig git iproute2 jq freetype libstdc++6 lsof openssl sqlite tar tzdata unzip wget zip \
+            && apk add --no-cache ca-certificates curl fontconfig git iproute2 jq freetype libstdc++ libstdc++6 lsof openssl sqlite tar tzdata unzip wget zip \
             && adduser -D -h /home/container container
 
 USER        container
