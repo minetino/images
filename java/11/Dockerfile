@@ -29,7 +29,7 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk update \
             && apk add --no-cache ca-certificates curl fontconfig git iproute2 jq freetype libstdc++6 lsof openssl sqlite tar tzdata unzip wget zip \
-            && adduser -S appuser -h /home/container
+            && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
