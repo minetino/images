@@ -2,8 +2,8 @@
 
 Custom Docker images (yolks) for Pterodactyl eggs
 
-Java images built with latest Alpine yolks/Temurin JRE builds
-Installers built on top of Java 8 Temurin builds
+Java images built with Temurin Alpine versions
+Installers use Java 8 Temurin builds
 
 ## Java
 
@@ -18,5 +18,5 @@ Installers built on top of Java 8 Temurin builds
 
 - [`alpine`](https://github.com/minetino/images/tree/main/oses/alpine)
   - `ghcr.io/minetino/installers:alpine`
-- [`ubuntu`](https://github.com/minetino/images/tree/main/oses/alpine)
+- [`ubuntu`](https://github.com/minetino/images/tree/main/oses/ubuntu)
   - `ghcr.io/minetino/installers:ubuntu`
