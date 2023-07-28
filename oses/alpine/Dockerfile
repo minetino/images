@@ -27,5 +27,4 @@ LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apk update \
-            && apk add --no-cache ca-certificates curl dos2unix fontconfig git iproute2 jq freetype libstdc++6 openssl sqlite tar tzdata unzip wget zip
+RUN         apk add --update --no-cache ca-certificates curl dos2unix fontconfig git iproute2 jq freetype libstdc++6 openssl sqlite tar tzdata unzip wget zip
