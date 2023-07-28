@@ -11,7 +11,7 @@ Installers use Java 8 Temurin builds
   - `ghcr.io/minetino/yolks:java_8`
 - [`java11`](https://github.com/minetino/images/tree/main/java/11)
   - `ghcr.io/minetino/yolks:java_11`
-- [`java17`](https://github.com/minetino/images/tree/main/java/16)
+- [`java16`](https://github.com/minetino/images/tree/main/java/16)
   - `ghcr.io/minetino/yolks:java_16`
 - [`java17`](https://github.com/minetino/images/tree/main/java/17)
   - `ghcr.io/minetino/yolks:java_17`
