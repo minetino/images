@@ -18,6 +18,7 @@ jobs:
         tag:
           - 8
           - 11
+          - 16
           - 17
     steps:
       - name: Check out
