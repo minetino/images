@@ -46,4 +46,4 @@ python --version
 # from the container itself.
 printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$STARTUP"
 # shellcheck disable=SC2086
-exec ${STARTUP}
+exec env ${STARTUP}
