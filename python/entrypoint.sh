@@ -9,8 +9,8 @@ export INTERNAL_IP
 python --version
 
 # Replace Startup Variables
-MODIFIED_STARTUP=$(printf $(printf ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
-printf ":/home/container$ ${MODIFIED_STARTUP}"
+MODIFIED_STARTUP=$(echo -e $(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
+echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
 eval ${MODIFIED_STARTUP}
