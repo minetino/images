@@ -13,6 +13,8 @@ Installers use Java 8 Temurin builds
   - `ghcr.io/minetino/yolks:java_11`
 - [`java17`](https://github.com/minetino/images/tree/main/java/17)
   - `ghcr.io/minetino/yolks:java_17`
+- [`java21`](https://github.com/minetino/images/tree/main/java/21)
+  - `ghcr.io/minetino/yolks:java_21`
 
 ## Python
 
