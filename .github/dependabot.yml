@@ -10,27 +10,12 @@ updates:
       interval: "weekly"
       day: "monday"
   - package-ecosystem: docker
-    directory: /java/8
+    directory: /python/3.11
     schedule:
       interval: "weekly"
       day: "monday"
   - package-ecosystem: docker
-    directory: /java/11
-    schedule:
-      interval: "weekly"
-      day: "monday"
-  - package-ecosystem: docker
-    directory: /java/17
-    schedule:
-      interval: "weekly"
-      day: "monday"
-  - package-ecosystem: docker
-    directory: /oses/alpine
-    schedule:
-      interval: "weekly"
-      day: "monday"
-  - package-ecosystem: docker
-    directory: /oses/ubuntu
+    directory: /python/3.12
     schedule:
       interval: "weekly"
       day: "monday"
