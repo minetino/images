@@ -33,8 +33,9 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - name: Build and push image
         uses: docker/build-push-action@v6
-        platform: linux/amd64,linux/arm64
         with:
+          multiPlatform: true
+          platform: linux/amd64,linux/arm64
           context: ./python
           file: ./python/${{ matrix.tag }}/Dockerfile
           push: true
