@@ -10,12 +10,12 @@ updates:
       interval: "weekly"
       day: "monday"
   - package-ecosystem: docker
-    directory: /python/3.11
+    directory: /python/3.12
     schedule:
       interval: "weekly"
       day: "monday"
   - package-ecosystem: docker
-    directory: /python/3.12
+    directory: /python/3.13
     schedule:
       interval: "weekly"
       day: "monday"
