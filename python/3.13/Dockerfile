@@ -2,7 +2,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH python:3.13-alpine
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
-LABEL       org.opencontainers.image.description "Python 3.13 Alpine Yolk"
+LABEL       org.opencontainers.image.description="Python 3.13 Alpine Yolk"
 LABEL       org.opencontainers.image.source="https://github.com/minetino/images"
 LABEL       org.opencontainers.image.licenses=MIT
 
