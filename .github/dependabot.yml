@@ -19,3 +19,8 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
+  - package-ecosystem: docker
+    directory: /python/3.14
+    schedule:
+      interval: "weekly"
+      day: "monday"
