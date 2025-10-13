@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.13-alpine
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.14-alpine
 
 LABEL       author="Kevin Patino" maintainer="kevin@kevinpatino.com"
 
