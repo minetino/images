@@ -1,4 +1,7 @@
 name: build python
+permissions:
+  contents: read
+  packages: write
 on:
   workflow_dispatch:
   schedule:
